@@ -1,0 +1,24 @@
+<form [formGroup]="form">
+  <div class="col-sm-{{colSm}}">
+    <label for="{{id}}">
+      {{label}}
+      <span class="obrigatory-field" *ngIf="obrigatory">&nbsp;*</span>:
+    </label>
+    <input
+      type="date"
+      name="{{id}}"
+      id="{{id}}"
+      class="form-control input-sm"
+      formControlName="{{controlName}}"
+      [readOnly]="readonly"
+      (change)="onChange()"
+    />
+    <span
+      id="ms-{{id}}"
+      class="label label-danger"
+      *ngIf="message.error"
+    >
+      {{message.description}}
+    </span>
+  </div>
+</form>

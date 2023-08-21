@@ -1,0 +1,8 @@
+<div class="fieldset-card">
+  <div class="fieldset-card-legend">{{ legend }}</div>
+  <div class="fieldset-card-container">
+    <ng-content></ng-content>
+
+    <div class="fieldset-card-legend-obg" *ngIf="obrigatory">* Campos de preenchimento obrigatório.</div>
+  </div>
+</div>

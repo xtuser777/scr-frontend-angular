@@ -1,0 +1,7 @@
+.text-center {
+  text-align: center;
+}
+
+input,select,button {
+  width: 100% !important;
+}

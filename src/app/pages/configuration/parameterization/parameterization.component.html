@@ -1,0 +1,121 @@
+<app-card-title title="Parametrização do sistema" />
+
+<app-fieldset-card legend="Dados da Empresa" [obrigatory]="true">
+  <form [formGroup]="form">
+    <div class="row">
+      <app-form-input-text
+        #corporateNameRef
+        colSm="6"
+        id="corporate-name"
+        label="Razão Social"
+        [obrigatory]="true"
+        controlName="corporateName"
+        [form]="form"
+      />
+      <app-form-input-text
+        #fantasyNameRef
+        colSm="4"
+        id="fantast-name"
+        label="Nome Fantasia"
+        [obrigatory]="true"
+        controlName="fantasyName"
+        [form]="form"
+      />
+      <app-form-input-text
+        #cnpjRef
+        colSm="2"
+        id="cnpj"
+        label="CNPJ"
+        [obrigatory]="true"
+        controlName="cnpj"
+        [form]="form"
+        mask="##.###.###/####-##"
+      />
+    </div>
+  </form>
+</app-fieldset-card>
+
+<app-fieldset-card legend="Dados de Contato" [obrigatory]="true">
+  <div class="row">
+    <div class="col-sm-8">
+      <app-fieldset-card legend="Endereço">
+        <div class="row">
+          <app-form-input-text
+            colSm="6"
+            id="street"
+            label="Endereço"
+            [obrigatory]="true"
+            controlName="street"
+            [form]="form"
+          />
+          <app-form-input-text
+            colSm="6"
+            id="neighborhood"
+            label="Bairro / Distrito"
+            [obrigatory]="true"
+            controlName="neighborhood"
+            [form]="form"
+          />
+        </div>
+        <div class="row">
+          <app-form-input-text
+            colSm="6"
+            id="complement"
+            label="Complemento"
+            [obrigatory]="false"
+            controlName="complement"
+            [form]="form"
+          />
+          <app-form-input-text
+            colSm="6"
+            id="code"
+            label="CEP"
+            [obrigatory]="true"
+            controlName="code"
+            [form]="form"
+            mask="##.###-###"
+          />
+        </div>
+        <div class="row">
+          <app-form-input-select
+            colSm="6"
+            id="state"
+            label="Estado"
+            [obrigatory]="true"
+            controlName="state"
+            [form]="form"
+          >
+            <option value="0">SELECIONE</option>
+          </app-form-input-select>
+          <app-form-input-select
+            colSm="6"
+            id="city"
+            label="Cidade"
+            [obrigatory]="true"
+            controlName="city"
+            [form]="form"
+          >
+            <option value="0">SELECIONE</option>
+          </app-form-input-select>
+        </div>
+      </app-fieldset-card>
+    </div>
+    <div class="col-sm-4">
+      <app-fieldset-card legend="Contato Pessoal">
+
+      </app-fieldset-card>
+    </div>
+  </div>
+</app-fieldset-card>
+
+<div class="row">
+  <div class="col-sm-2">
+      <a role="button" id="voltar" class="btn btn-sm btn-default" href="/representacoes/inicio">VOLTAR</a>
+  </div>
+
+  <div class="col-sm-8"></div>
+
+  <div class="col-sm-2">
+      <button type="button" id="salvar" class="btn btn-sm btn-success" (click)="handleSaveClick()">SALVAR</button>
+  </div>
+</div>

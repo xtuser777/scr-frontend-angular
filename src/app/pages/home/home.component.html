@@ -1,0 +1,76 @@
+<app-card-title [title]="('Eventos do Sistema')"/>
+
+<form [formGroup]="form">
+  <app-fieldset-card [legend]="('Filtragem dos Eventos')" [obrigatory]="false">
+    <div class="row">
+      <app-form-input-text
+        colSm="5"
+        id="filter"
+        label="Filtro"
+        controlName="filter"
+        [form]="form"
+      />
+
+      <app-form-input-date
+        colSm="2"
+        id="date"
+        label="Data dos eventos:"
+        controlName="date"
+        [form]="form"
+      />
+
+      <app-form-input-select
+        colSm="3"
+        id="order-type"
+        label="Tipo de pedido:"
+        controlName="orderType"
+        [form]="form"
+      >
+        <option value="0">SELECIONE</option>
+        <option value="1">VENDA</option>
+        <option value="2">FRETE</option>
+      </app-form-input-select>
+
+      <app-form-button
+        colSm="2"
+        id="do-filter"
+        text="FILTRAR"
+        [form]="form"
+        [parent]="this"
+      />
+    </div>
+  </app-fieldset-card>
+</form>
+
+<app-fieldset-card legend="Eventos do Sistema" [obrigatory]="false">
+  <app-form-table id="table-events">
+    <thead>
+      <tr>
+        <th>DESCRIÇÃO</th>
+        <th>DATA</th>
+        <th>HORA</th>
+        <th>PEDIDO</th>
+        <th>ATOR</th>
+      </tr>
+    </thead>
+
+    <tbody id="events" *ngFor="let event of events">
+      <tr>
+        <td>{{event.description}}</td>
+        <td>{{event.date}}</td>
+        <td>{{event.time}}</td>
+        <td>{{event.saleOrder.length > 0 ? event.saleOrder : event.freightOrder}}</td>
+        <td>{{event.author}}</td>
+      </tr>
+    </tbody>
+  </app-form-table>
+</app-fieldset-card>
+
+<div class="row">
+  <div class="col-sm-4"></div>
+  <div class="col-sm-4">
+    <button type="button" id="report" class="btn btn-primary btn-sm">Gerar PDF</button>
+  </div>
+  <div class="col-sm-4"></div>
+</div>
+<!-- Fim conteudo da pagina -->

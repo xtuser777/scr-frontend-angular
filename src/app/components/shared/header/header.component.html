@@ -1,0 +1,275 @@
+<header>
+  <!-- Barra de ferramentas -->
+  <nav class="navbar navbar-fixed-top navbar-default navbar-scr">
+
+    <div class="container-fluid">
+
+      <!-- Brand and toggle get grouped for better mobile display -->
+      <div class="navbar-header">
+
+        <button
+          type="button"
+          class="navbar-toggle collapsed"
+          data-toggle="collapse"
+          data-target="#bs-example-navbar-collapse-1"
+          aria-expanded="false"
+        >
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+
+        <a
+          class="navbar-brand navbar-item-dropdown-bold"
+          href="/representacoes/inicio"
+        >
+          SCR
+        </a>
+
+      </div>
+
+      <!-- Collect the nav links, forms, and other content for toggling -->
+      <div
+        class="collapse navbar-collapse"
+        id="bs-example-navbar-collapse-1"
+      >
+        <!-- Botoes -->
+        <ul class="nav navbar-nav">
+          <!-- Botao inicio -->
+          <li>
+            <a
+              class="font-navbar navbar-item-dropdown"
+              href="/representacoes/inicio"
+            >
+              Início
+            </a>
+          </li>
+          <!-- Fim botao inicio -->
+          <!-- Botao gerenciar -->
+          <li class="dropdown">
+            <a
+              href="#"
+              class="dropdown-toggle navbar-item-dropdown"
+              data-toggle="dropdown"
+              role="button"
+              aria-haspopup="true"
+              aria-expanded="false"
+            >
+              Gerenciar <span class="caret"></span>
+            </a>
+            <!-- Popup botao gerenciar -->
+            <ul class="dropdown-menu">
+              <li>
+                <a href="/representacoes/gerenciar/funcionario">Funcionários</a>
+              </li>
+              <li>
+                <a href="/representacoes/gerenciar/cliente">Clientes</a>
+              </li>
+              <li>
+                <a href="/representacoes/gerenciar/motorista">Motoristas</a>
+              </li>
+              <li>
+                <a href="/representacoes/gerenciar/proprietario">Proprietários de Caminhões</a>
+              </li>
+              <li>
+                <a href="/representacoes/gerenciar/caminhao">Caminhões</a>
+              </li>
+              <li>
+                <a href="/representacoes/gerenciar/representacao">Representações</a>
+              </li>
+              <li>
+                <a href="/representacoes/gerenciar/produto">Produtos</a>
+              </li>
+              <li>
+                <a href="/representacoes/gerenciar/tipocaminhao">Tipos de Caminhão</a>
+              </li>
+              <li>
+                <a href="/representacoes/gerenciar/categoria">Categorias de Contas</a>
+              </li>
+              <li>
+                <a href="/representacoes/gerenciar/formapagamento">Formas de Pagamento</a>
+              </li>
+            </ul>
+            <!-- Fim popup botao gerenciar -->
+          </li>
+          <!-- Fim botao gerenciar-->
+          <!-- Botao orcamento -->
+          <li class="dropdown">
+            <a
+              href="#"
+              class="dropdown-toggle navbar-item-dropdown"
+              data-toggle="dropdown"
+              role="button"
+              aria-haspopup="true"
+              aria-expanded="false"
+            >
+              Orçamento <span class="caret"></span>
+            </a>
+            <!-- Popup botao orcamento -->
+            <ul class="dropdown-menu">
+              <li>
+                <a href="/representacoes/orcamento/venda">Venda</a>
+              </li>
+              <li>
+                <a href="/representacoes/orcamento/frete">Frete</a>
+              </li>
+            </ul>
+            <!-- Fim popup botao orcamento -->
+          </li>
+          <!-- Fim botao orcamento -->
+          <!-- Botao pedido -->
+          <li class="dropdown">
+            <a
+              href="#"
+              class="dropdown-toggle navbar-item-dropdown"
+              data-toggle="dropdown"
+              role="button"
+              aria-haspopup="true"
+              aria-expanded="false"
+            >
+              Pedido <span class="caret"></span>
+            </a>
+            <!-- Popup botao pedido -->
+            <ul class="dropdown-menu">
+              <li>
+                <a href="/representacoes/pedido/venda">Venda</a>
+              </li>
+              <li>
+                <a href="/representacoes/pedido/frete">Frete</a>
+              </li>
+              <li>
+                <a href="/representacoes/pedido/status">Alterar status</a>
+              </li>
+              <li>
+                <a href="/representacoes/pedido/autorizar">Autorizar Carregamento</a>
+              </li>
+            </ul>
+            <!-- Fim popup botao pedido -->
+          </li>
+          <!-- Fim botao pedido -->
+          <!-- Botao controlar -->
+          <li class="dropdown">
+            <a
+              href="#"
+              class="dropdown-toggle navbar-item-dropdown"
+              data-toggle="dropdown"
+              role="button"
+              aria-haspopup="true"
+              aria-expanded="false"
+            >
+              Controlar <span class="caret"></span>
+            </a>
+            <!-- Popup botao controlar -->
+            <ul class="dropdown-menu">
+              <li>
+                <a href="/representacoes/controlar/contas/pagar">Contas a Pagar</a>
+              </li>
+              <li>
+                <a href="/representacoes/controlar/contas/receber">Contas a Receber</a>
+              </li>
+              <li>
+                <a href="/representacoes/controlar/lancar/despesas">Lançar Despesas</a>
+              </li>
+            </ul>
+            <!-- Fim popup botao controlar -->
+          </li>
+          <!-- Fim botao controlar -->
+
+          <!-- Botao relatorio -->
+          <li class="dropdown">
+            <a
+              href="#"
+              class="dropdown-toggle navbar-item-dropdown"
+              data-toggle="dropdown"
+              role="button"
+              aria-haspopup="true"
+              aria-expanded="false"
+            >
+              Relatório <span class="caret"></span>
+            </a>
+            <!-- Popup botao relatorio -->
+            <ul class="dropdown-menu">
+              <li>
+                <a href="/representacoes/relatorio/cliente/">Clientes</a>
+              </li>
+              <li>
+                <a href="/representacoes/relatorio/pedido/venda">Pedido de Venda</a>
+              </li>
+              <li>
+                <a href="/representacoes/relatorio/pedido/frete">Pedido de Frete</a>
+              </li>
+              <li>
+                <a href="/representacoes/relatorio/orcamento/venda">Orçamento de Venda</a>
+              </li>
+              <li>
+                <a href="/representacoes/relatorio/orcamento/frete">Orçamento de Frete</a>
+              </li>
+              <li>
+                <a href="/representacoes/relatorio/conta/pagar">Contas a Pagar</a>
+              </li>
+              <li>
+                <a href="/representacoes/relatorio/conta/receber">Contas a Receber</a>
+              </li>
+              <li>
+                <a href="/representacoes/relatorio/produto">Produtos</a>
+              </li>
+            </ul>
+            <!-- Fim popup botao relatorio -->
+          </li>
+          <!-- Fim botao relatorio -->
+        </ul>
+        <!-- Fim botoes -->
+        <!-- Ferramentas do sistema -->
+        <ul class="nav navbar-nav navbar-right">
+          <!-- Botao sobre -->
+          <li>
+            <a
+              class="navbar-item-dropdown"
+              href="assets/help/ManualdoUsuárioSCR.html"
+              target="_blank"
+            >
+              Ajuda
+            </a>
+          </li>
+          <!-- Fim botao sobre -->
+          <!-- Botao de usuario -->
+          <li class="dropdown">
+            <a
+              class="dropdown-toggle navbar-item-dropdown-bold"
+              data-toggle="dropdown"
+              role="button"
+              aria-haspopup="true"
+              aria-expanded="false"
+            >
+              USER <span class="caret"></span>
+            </a>
+            <!-- Popup usuario -->
+            <ul class="dropdown-menu">
+              <li class="dropdown-header">Configurações</li>
+              <li>
+                <a href="/representacoes/configuracao/parametrizacao">Parametrização</a>
+              </li>
+              <li>
+                <a href="/representacoes/configuracao/dados">Meus Dados</a>
+              </li>
+              <li>
+                <span role="separator" class="divider"></span>
+              </li>
+              <li>
+                <a href="/representacoes/login/logout.php">Sair</a>
+              </li>
+            </ul>
+            <!-- Fim popup usuario -->
+          </li>
+          <!-- Fim botao de usuario -->
+        </ul>
+        <!-- Fim ferramentas do sistema -->
+
+      </div><!-- /.navbar-collapse -->
+
+    </div><!-- /.container-fluid -->
+
+  </nav>
+  <!-- Fim barra de ferramentas -->
+</header>
