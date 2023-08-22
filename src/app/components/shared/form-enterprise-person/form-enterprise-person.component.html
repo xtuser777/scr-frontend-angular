@@ -1,0 +1,34 @@
+<app-fieldset-card legend="Dados da Empresa" [obrigatory]="true">
+  <form [formGroup]="form">
+    <div class="row">
+      <app-form-input-text
+        #corporateNameRef
+        colSm="6"
+        id="corporate-name"
+        label="Razão Social"
+        [obrigatory]="true"
+        controlName="corporateName"
+        [form]="form"
+      />
+      <app-form-input-text
+        #fantasyNameRef
+        colSm="4"
+        id="fantast-name"
+        label="Nome Fantasia"
+        [obrigatory]="true"
+        controlName="fantasyName"
+        [form]="form"
+      />
+      <app-form-input-text
+        #cnpjRef
+        colSm="2"
+        id="cnpj"
+        label="CNPJ"
+        [obrigatory]="true"
+        controlName="cnpj"
+        [form]="form"
+        mask="##.###.###/####-##"
+      />
+    </div>
+  </form>
+</app-fieldset-card>

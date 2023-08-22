@@ -12,10 +12,10 @@ export class FormButtonComponent {
   @Input() text!: string;
   @Input() color!: string;
   @Input() label: boolean = false;
+  @Input() fn: number = 1;
   @Input() parent: any;
-  @Input() form!: FormGroup;
 
   onClick() {
-    this.parent.handleSaveClick();
+    this.parent.handleClick(this.fn);
   }
 }

@@ -35,7 +35,8 @@
         colSm="2"
         id="do-filter"
         text="FILTRAR"
-        [form]="form"
+        color="btn-primary"
+        [label]="true"
         [parent]="this"
       />
     </div>
@@ -59,7 +60,7 @@
         <td>{{event.description}}</td>
         <td>{{event.date}}</td>
         <td>{{event.time}}</td>
-        <td>{{event.saleOrder.length > 0 ? event.saleOrder : event.freightOrder}}</td>
+        <td>{{event.saleOrder ? event.saleOrder.description : event.freightOrder?.description}}</td>
         <td>{{event.author}}</td>
       </tr>
     </tbody>

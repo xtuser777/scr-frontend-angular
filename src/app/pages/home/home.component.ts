@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
-import { Event, IEvent } from 'src/app/models/event.model';
+import { IEvent } from 'src/app/models/event.model';
 
 @Component({
   selector: 'app-home',
@@ -18,38 +18,19 @@ export class HomeComponent {
       orderType: ['0'],
     });
 
+    this.filterData = this.filterData.bind(this);
+
     this.events = [];
-
-    this.events.push(
-      new Event(
-        {
-          id: 0,
-          description: 'Pedido de frete 01',
-          date: '2023-08-19',
-          time: '12:05:02',
-          saleOrder: '',
-          freightOrder: 'Teste 01',
-          author: 'Lucas'
-        }
-      )
-    );
-
-    this.events.push(
-      new Event(
-        {
-          id: 0,
-          description: 'Pedido de venda 01',
-          date: '2023-08-19',
-          time: '15:05:02',
-          saleOrder: 'Teste 01',
-          freightOrder: '',
-          author: 'Lucas'
-        }
-      )
-    );
   }
 
-  filter() {
+  handleClick(fn: number) {
+    switch(fn) {
+      case 1: this.filterData(); break;
+      default: alert('Função inválida.'); break;
+    }
+  }
+
+  filterData() {
     console.log(
       this.form.controls['filter'].value,
       this.form.controls['date'].value,
