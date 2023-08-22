@@ -3,14 +3,19 @@ import { FormGroup } from '@angular/forms';
 import { IError } from 'src/app/pages/configuration/parameterization/parameterization.component';
 
 @Component({
-  selector: 'app-form-input-select',
-  templateUrl: './form-input-select.component.html'
+  selector: 'app-form-input-group-text',
+  templateUrl: './form-input-group-text.component.html',
+  styleUrls: ['./form-input-group-text.component.css']
 })
-export class FormInputSelectComponent {
+export class FormInputGroupTextComponent {
   @Input() colSm!: string;
   @Input() id!: string;
   @Input() label!: string;
+  @Input() icon!: string;
+  @Input() placeholder: string = '';
   @Input() obrigatory: boolean = false;
+  @Input() readonly: boolean = false;
+  @Input() mask: string = '';
   @Input() controlName!: string;
   @Input() form!: FormGroup;
 
@@ -26,7 +31,7 @@ export class FormInputSelectComponent {
 
   validate(control: string) {
     if (
-      this.form.controls[control].invalid || this.form.controls[control].value == '0'
+      this.form.controls[control].invalid
     )
       this.error = {
         valid: false,

@@ -16,6 +16,8 @@ import { FormButtonComponent } from './components/shared/form-button/form-button
 import { FormTableComponent } from './components/shared/form-table/form-table.component';
 import { MaskDirective } from './directives/mask.directive';
 import { ParameterizationComponent } from './pages/configuration/parameterization/parameterization.component';
+import { FormInputGroupTextComponent } from './components/shared/form-input-group-text/form-input-group-text.component';
+import { FormLinkButtonComponent } from './components/shared/form-link-button/form-link-button.component';
 
 @NgModule({
   declarations: [
@@ -31,7 +33,9 @@ import { ParameterizationComponent } from './pages/configuration/parameterizatio
     FormButtonComponent,
     FormTableComponent,
     MaskDirective,
-    ParameterizationComponent
+    ParameterizationComponent,
+    FormInputGroupTextComponent,
+    FormLinkButtonComponent
   ],
   imports: [
     BrowserModule,

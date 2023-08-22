@@ -1,6 +1,12 @@
 <div class="col-sm-{{colSm}}">
-  <label for="{{id}}">&nbsp;</label>
-  <button type="button" name="{{id}}" id="{{id}}" class="btn btn-primary btn-sm" (click)="onClick()">
+  <label for="{{id}}" *ngIf="label">&nbsp;</label>
+  <button
+    type="button"
+    name="{{id}}"
+    id="{{id}}"
+    class="btn btn-sm {{color}}"
+    (click)="onClick()"
+  >
     {{text}}
   </button>
 </div>

@@ -1,0 +1,30 @@
+<form [formGroup]="form">
+  <div class="col-sm-{{colSm}}">
+    <label for="{{id}}">
+      {{label}}
+      <span class="obrigatory-field" *ngIf="obrigatory">&nbsp;*</span>:
+    </label>
+    <div class="input-group expanded">
+      <div class="input-group-addon">
+        <span class="glyphicon {{icon}}" aria-hidden="true"></span>
+      </div>
+      <input
+        type="text"
+        name="{{id}}"
+        id="{{id}}"
+        class="form-control input-sm"
+        [formControlName]="controlName"
+        [readOnly]="readonly"
+        mask="{{mask}}"
+        (keyup)="onChange()"
+      />
+    </div>
+    <span
+      id="ms-{{id}}"
+      class="label label-danger"
+      *ngIf="!error.valid"
+    >
+      {{error.message}}
+    </span>
+  </div>
+</form>
