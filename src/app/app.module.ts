@@ -20,6 +20,8 @@ import { FormInputGroupTextComponent } from './components/shared/form-input-grou
 import { FormLinkButtonComponent } from './components/shared/form-link-button/form-link-button.component';
 import { FormEnterprisePersonComponent } from './components/shared/form-enterprise-person/form-enterprise-person.component';
 import { FormContactComponent } from './components/shared/form-contact/form-contact.component';
+import { DataComponent } from './pages/configuration/data/data.component';
+import { FormIndividualPersonComponent } from './components/shared/form-individual-person/form-individual-person.component';
 
 @NgModule({
   declarations: [
@@ -39,7 +41,9 @@ import { FormContactComponent } from './components/shared/form-contact/form-cont
     FormInputGroupTextComponent,
     FormLinkButtonComponent,
     FormEnterprisePersonComponent,
-    FormContactComponent
+    FormContactComponent,
+    DataComponent,
+    FormIndividualPersonComponent
   ],
   imports: [
     BrowserModule,

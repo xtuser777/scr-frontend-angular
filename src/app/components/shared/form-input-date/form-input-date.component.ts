@@ -1,5 +1,6 @@
 import { Component, Input } from '@angular/core';
 import { FormGroup } from '@angular/forms';
+import { IError } from 'src/app/pages/configuration/parameterization/parameterization.component';
 
 @Component({
   selector: 'app-form-input-date',
@@ -12,11 +13,31 @@ export class FormInputDateComponent {
   @Input() obrigatory: boolean = false;
   @Input() readonly: boolean = false;
   @Input() message: {error: boolean, description: string} = { error: false, description: '' };
-  @Input() handle?: any;
   @Input() controlName!: string;
   @Input() form!: FormGroup;
 
+  public error: IError;
+
+  constructor() {
+    this.error = { valid: true, message: '' };
+  }
+
   onChange() {
-    if (this.handle != undefined) this.handle();
+    this.validate(this.controlName);
+  }
+
+  validate(control: string) {
+    if (
+      this.form.controls[control].invalid
+    )
+      this.error = {
+        valid: false,
+        message: 'Campo inválido.'
+      };
+    else
+      this.error = {
+        valid: true,
+        message: ''
+      };
   }
 }
