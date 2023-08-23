@@ -1,0 +1,39 @@
+<app-fieldset-card legend="Dados de autenticação" [obrigatory]="true">
+  <div class="row">
+    <app-form-input-group-text
+      #loginRef
+      colSm="4"
+      id="login"
+      icon="glyphicon-user"
+      label="Login"
+      placeholder="Digite seu nome de usuário."
+      controlName="login"
+      [obrigatory]="true"
+      [form]="form"
+    />
+
+    <app-form-input-group-text
+      #passwordRef
+      colSm="4"
+      id="password"
+      icon="glyphicon-lock"
+      label="Senha"
+      placeholder="Digite sua senha."
+      controlName="password"
+      [obrigatory]="true"
+      [form]="form"
+    />
+
+    <app-form-input-group-text
+      #passwordConfirmRef
+      colSm="4"
+      id="password-confirm"
+      icon="glyphicon-lock"
+      label="Confirmar Senha"
+      placeholder="Confirme sua senha."
+      controlName="passwordConfirm"
+      [obrigatory]="true"
+      [form]="form"
+    />
+  </div>
+</app-fieldset-card>

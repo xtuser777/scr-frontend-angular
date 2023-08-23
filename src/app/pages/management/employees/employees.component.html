@@ -1,0 +1,93 @@
+<app-card-title title="Gerenciar Funcionários" />
+
+<app-fieldset-card legend="Filtragem de Funcionários">
+  <div class="row">
+    <app-form-input-text
+      colSm="8"
+      id="filter"
+      label="Filtro"
+      placeholder="Filtrar por nome, login, email..."
+      controlName="filter"
+      [form]="form"
+    />
+
+    <app-form-input-date
+      colSm="2"
+      id="admission"
+      label="Admissão"
+      controlName="admission"
+      [form]="form"
+    />
+
+    <app-form-button
+      colSm="2"
+      id="do-filter"
+      color="btn-primary"
+      [label]="true"
+      text="FILTRAR"
+      [parent]="this"
+      [fn]="1"
+    />
+  </div>
+
+  <div class="row">
+    <app-form-input-select
+      colSm="10"
+      id="order-by"
+      label="Ordenar por"
+      controlName="orderBy"
+      [form]="form"
+    >
+      <option value="1">REGISTRO (CRESCENTE)</option>
+        <option value="2">REGISTRO (DECRESCENTE)</option>
+        <option value="3">NOME (CRESCENTE)</option>
+        <option value="4">NOME (DECRESCENTE)</option>
+        <option value="5">USUÁRIO (CRESCENTE)</option>
+        <option value="6">USUÁRIO (DECRESCENTE)</option>
+        <option value="7">NÍVEL (CRESCENTE)</option>
+        <option value="8">NÍVEL (DECRESCENTE)</option>
+        <option value="9">CPF (CRESCENTE)</option>
+        <option value="10">CPF (DECRESCENTE)</option>
+        <option value="11">ADMISSÃO (CRESCENTE)</option>
+        <option value="12">ADMISSÃO (DECRESCENTE)</option>
+        <option value="13">TIPO (CRESCENTE)</option>
+        <option value="14">TIPO (DECRESCENTE)</option>
+        <option value="15">ATIVO (CRESCENTE)</option>
+        <option value="16">ATIVO (DECRESCENTE)</option>
+        <option value="17">EMAIL (CRESCENTE)</option>
+        <option value="18">EMAIL (DECRESCENTE)</option>
+    </app-form-input-select>
+
+    <app-form-link-button
+      colSm="2"
+      id="add"
+      color="btn-success"
+      [label]="true"
+      text="NOVO"
+      link="/representacoes/gerenciar/funcionario/novo"
+    />
+  </div>
+</app-fieldset-card>
+
+<app-fieldset-card legend="Funcionários Cadastrados">
+  <app-form-table id="table-employee">
+    <thead>
+      <tr>
+        <th class="hidden">ID</th>
+        <th style="width: 20%;">NOME</th>
+        <th style="width: 10%;">USUÁRIO</th>
+        <th style="width: 12%;">NÍVEL</th>
+        <th style="width: 12%;">CPF</th>
+        <th style="width: 8%;">ADMISSÃO</th>
+        <th style="width: 10%;">TIPO</th>
+        <th style="width: 8%;">ATIVO</th>
+        <th>EMAIL</th>
+        <th style="width: 2%;">&nbsp;</th>
+        <th style="width: 2%;">&nbsp;</th>
+        <th style="width: 2%;">&nbsp;</th>
+      </tr>
+    </thead>
+
+    <tbody id="tbody-employee"></tbody>
+  </app-form-table>
+</app-fieldset-card>

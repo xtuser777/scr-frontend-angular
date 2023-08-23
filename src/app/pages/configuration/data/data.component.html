@@ -1,39 +1,10 @@
 <app-card-title title="Dados do Funcionário" />
 
-<app-form-individual-person />
+<app-form-individual-person #personRef />
 
-<app-form-contact />
+<app-form-contact #contactRef />
 
-<app-fieldset-card legend="Dados de autenticação" [obrigatory]="true">
-  <div class="row">
-    <div class="col-sm-4">
-      <label for="txLogin">Login <span style="color: red;">*</span>:</label>
-      <div class="input-group" style="width: 100%;">
-        <div class="input-group-addon"><span class="glyphicon glyphicon-user" aria-hidden="true"></span></div>
-        <input type="text" name="txLogin" id="txLogin" class="form-control input-sm" value="" />
-      </div>
-      <span id="msLogin" class="label label-danger hidden"></span>
-    </div>
-
-    <div class="col-sm-4">
-      <label for="txSenha">Senha <span style="color: red;">*</span>:</label>
-      <div class="input-group" style="width: 100%;">
-        <div class="input-group-addon"><span class="glyphicon glyphicon-lock" aria-hidden="true"></span></div>
-        <input type="password" name="txSenha" id="txSenha" class="form-control input-sm" value="" />
-      </div>
-      <span id="msSenha" class="label label-danger hidden"></span>
-    </div>
-
-    <div class="col-sm-4">
-      <label for="txConfSenha">Confirmar Senha <span style="color: red;">*</span>:</label>
-      <div class="input-group" style="width: 100%;">
-        <div class="input-group-addon"><span class="glyphicon glyphicon-lock" aria-hidden="true"></span></div>
-        <input type="password" name="txConfSenha" id="txConfSenha" class="form-control input-sm" value="" />
-      </div>
-      <span id="msConfSenha" class="label label-danger hidden"></span>
-    </div>
-  </div>
-</app-fieldset-card>
+<app-form-auth-data #authRef />
 
 <div class="row">
   <app-form-link-button colSm="2" id="back" color="btn-default" [label]="false" text="VOLTAR" link="/representacoes/inicio" />

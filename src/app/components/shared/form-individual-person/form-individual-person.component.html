@@ -1,6 +1,7 @@
 <app-fieldset-card legend="Dados pessoais" [obrigatory]="true">
   <div class="row">
     <app-form-input-text
+      #nameRef
       colSm="8"
       id="name"
       label="Nome"
@@ -10,6 +11,7 @@
       [form]="form"
     />
     <app-form-input-text
+      #cpfRef
       colSm="2"
       id="cpf"
       label="CPF"
@@ -20,10 +22,10 @@
       [form]="form"
     />
     <app-form-input-date
+      #birthRef
       colSm="2"
       id="birth"
       label="Nascimento"
-      placeholder="Digite sua data de nascimnto."
       controlName="birth"
       [obrigatory]="true"
       [form]="form"

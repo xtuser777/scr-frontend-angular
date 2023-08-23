@@ -16,9 +16,9 @@
     <span
       id="ms-{{id}}"
       class="label label-danger"
-      *ngIf="message.error"
+      *ngIf="!error.valid"
     >
-      {{message.description}}
+      {{error.message}}
     </span>
   </div>
 </form>

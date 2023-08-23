@@ -22,6 +22,9 @@ import { FormEnterprisePersonComponent } from './components/shared/form-enterpri
 import { FormContactComponent } from './components/shared/form-contact/form-contact.component';
 import { DataComponent } from './pages/configuration/data/data.component';
 import { FormIndividualPersonComponent } from './components/shared/form-individual-person/form-individual-person.component';
+import { FormAuthDataComponent } from './components/shared/form-auth-data/form-auth-data.component';
+import { EmployeeComponent } from './pages/management/employee/employee.component';
+import { EmployeesComponent } from './pages/management/employees/employees.component';
 
 @NgModule({
   declarations: [
@@ -43,7 +46,10 @@ import { FormIndividualPersonComponent } from './components/shared/form-individu
     FormEnterprisePersonComponent,
     FormContactComponent,
     DataComponent,
-    FormIndividualPersonComponent
+    FormIndividualPersonComponent,
+    FormAuthDataComponent,
+    EmployeeComponent,
+    EmployeesComponent
   ],
   imports: [
     BrowserModule,
