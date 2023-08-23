@@ -1,0 +1,26 @@
+<app-fieldset-card legend="Dados do Funcionário" [obrigatory]="true">
+  <div class="row">
+    <app-form-input-date
+      #admissionRef
+      colSm="6"
+      id="admission"
+      label="Admissão"
+      controlName="admission"
+      [obrigatory]="true"
+      [form]="form"
+    />
+    <app-form-input-select
+      #typeRef
+      colSm="6"
+      id="type"
+      label="Tipo"
+      controlName="type"
+      [obrigatory]="true"
+      [form]="form"
+    >
+      <option value="0">SELECIONE</option>
+      <option value="1">INTERNO</option>
+      <option value="2">VENDEDOR</option>
+    </app-form-input-select>
+  </div>
+</app-fieldset-card>

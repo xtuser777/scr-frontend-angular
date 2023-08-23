@@ -39,4 +39,10 @@ export class FormIndividualPersonComponent {
     this.cpf.validate('cpf');
     this.birth.validate('birth');
   }
+
+  clear() {
+    this.form.controls['name'].setValue('');
+    this.form.controls['cpf'].setValue('');
+    this.form.controls['birth'].setValue('');
+  }
 }

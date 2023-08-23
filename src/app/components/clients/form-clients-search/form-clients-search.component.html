@@ -1,0 +1,28 @@
+<app-fieldset-card legend="Filtragem de clientes">
+  <div class="row">
+    <app-form-input-text colSm="8" id="filter" label="Filtro" placeholder="Filtrar por nome e email..."
+      controlName="filter" [form]="form" />
+
+    <app-form-input-date colSm="2" id="register" label="Cadastro" controlName="register" [form]="form" />
+
+    <app-form-button colSm="2" id="do-filter" color="btn-primary" text="FILTRAR" [label]="true" [parent]="this" />
+  </div>
+  <div class="row">
+    <app-form-input-select colSm="10" id="order-by" label="Ordenar por" controlName="orderBy" [form]="form">
+      <option value="1">REGISTRO (CRESCENTE)</option>
+      <option value="2">REGISTRO (DECRESCENTE)</option>
+      <option value="3">NOME (CRESCENTE)</option>
+      <option value="4">NOME (DECRESCENTE)</option>
+      <option value="5">CPF/CNPJ (CRESCENTE)</option>
+      <option value="6">CPF/CNPJ (DECRESCENTE)</option>
+      <option value="7">CADASTRO (CRESCENTE)</option>
+      <option value="8">CADASTRO (DECRESCENTE)</option>
+      <option value="9">TIPO (CRESCENTE)</option>
+      <option value="10">TIPO (DECRESCENTE)</option>
+      <option value="11">EMAIL (CRESCENTE)</option>
+      <option value="12">EMAIL (DECRESCENTE)</option>
+    </app-form-input-select>
+
+    <app-form-link-button colSm="2" id="add" color="btn-success" text="NOVO" link="/representacoes/gerenciar/cliente/novo" [label]="true" />
+  </div>
+</app-fieldset-card>

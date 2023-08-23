@@ -91,4 +91,17 @@ export class FormContactComponent {
     this.cellphone.validate('cellphone');
     this.email.validate('email');
   }
+
+  clear() {
+    this.form.controls['street'].setValue('');
+    this.form.controls['number'].setValue('');
+    this.form.controls['neighborhood'].setValue('');
+    this.form.controls['complement'].setValue('');
+    this.form.controls['code'].setValue('');
+    this.form.controls['state'].setValue('0');
+    this.form.controls['city'].setValue('0');
+    this.form.controls['phone'].setValue('');
+    this.form.controls['cellphone'].setValue('');
+    this.form.controls['email'].setValue('');
+  }
 }

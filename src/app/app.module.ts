@@ -25,6 +25,12 @@ import { FormIndividualPersonComponent } from './components/shared/form-individu
 import { FormAuthDataComponent } from './components/shared/form-auth-data/form-auth-data.component';
 import { EmployeeComponent } from './pages/management/employee/employee.component';
 import { EmployeesComponent } from './pages/management/employees/employees.component';
+import { FormEmployeeDataComponent } from './components/employee/form-employee-data/form-employee-data.component';
+import { ClientsComponent } from './pages/management/clients/clients.component';
+import { ClientComponent } from './pages/management/client/client.component';
+import { FormClientsSearchComponent } from './components/clients/form-clients-search/form-clients-search.component';
+import { FormClientsTableComponent } from './components/clients/form-clients-table/form-clients-table.component';
+import { FormClientTypeComponent } from './components/client/form-client-type/form-client-type.component';
 
 @NgModule({
   declarations: [
@@ -49,7 +55,13 @@ import { EmployeesComponent } from './pages/management/employees/employees.compo
     FormIndividualPersonComponent,
     FormAuthDataComponent,
     EmployeeComponent,
-    EmployeesComponent
+    EmployeesComponent,
+    FormEmployeeDataComponent,
+    ClientsComponent,
+    ClientComponent,
+    FormClientsSearchComponent,
+    FormClientsTableComponent,
+    FormClientTypeComponent
   ],
   imports: [
     BrowserModule,
