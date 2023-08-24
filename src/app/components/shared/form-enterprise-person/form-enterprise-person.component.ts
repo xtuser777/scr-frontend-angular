@@ -37,4 +37,10 @@ export class FormEnterprisePersonComponent {
     this.fantasyName.validate('fantasyName');
     this.cnpj.validate('cnpj');
   }
+
+  clear() {
+    this.form.controls['corporateName'].setValue('');
+    this.form.controls['fantasyName'].setValue('');
+    this.form.controls['cnpj'].setValue('');
+  }
 }

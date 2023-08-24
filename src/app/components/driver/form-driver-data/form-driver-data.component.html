@@ -1,0 +1,14 @@
+<app-fieldset-card legend="Dados do motorista" [obrigatory]="true">
+  <div class="row">
+    <app-form-input-text
+      #cnhRef
+      colSm="12"
+      id="cnh"
+      label="CNH"
+      mask="###########"
+      controlName="cnh"
+      [obrigatory]="true"
+      [form]="form"
+    />
+  </div>
+</app-fieldset-card>

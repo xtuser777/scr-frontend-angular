@@ -31,6 +31,18 @@ import { ClientComponent } from './pages/management/client/client.component';
 import { FormClientsSearchComponent } from './components/clients/form-clients-search/form-clients-search.component';
 import { FormClientsTableComponent } from './components/clients/form-clients-table/form-clients-table.component';
 import { FormClientTypeComponent } from './components/client/form-client-type/form-client-type.component';
+import { FormFooterButtonsComponent } from './components/shared/form-footer-buttons/form-footer-buttons.component';
+import { DriversComponent } from './pages/management/drivers/drivers.component';
+import { DriverComponent } from './pages/management/driver/driver.component';
+import { FormDriversSearchComponent } from './components/drivers/form-drivers-search/form-drivers-search.component';
+import { FormDriversTableComponent } from './components/drivers/form-drivers-table/form-drivers-table.component';
+import { FormDriverDataComponent } from './components/driver/form-driver-data/form-driver-data.component';
+import { FormDriverBankDataComponent } from './components/driver/form-driver-bank-data/form-driver-bank-data.component';
+import { ProprietariesComponent } from './pages/management/proprietaries/proprietaries.component';
+import { ProprietaryComponent } from './pages/management/proprietary/proprietary.component';
+import { FormProprietariesSearchComponent } from './components/proprietaries/form-proprietaries-search/form-proprietaries-search.component';
+import { FormProprietariesTableComponent } from './components/proprietaries/form-proprietaries-table/form-proprietaries-table.component';
+import { FormProprietaryLinkComponent } from './components/proprietary/form-proprietary-link/form-proprietary-link.component';
 
 @NgModule({
   declarations: [
@@ -61,7 +73,19 @@ import { FormClientTypeComponent } from './components/client/form-client-type/fo
     ClientComponent,
     FormClientsSearchComponent,
     FormClientsTableComponent,
-    FormClientTypeComponent
+    FormClientTypeComponent,
+    FormFooterButtonsComponent,
+    DriversComponent,
+    DriverComponent,
+    FormDriversSearchComponent,
+    FormDriversTableComponent,
+    FormDriverDataComponent,
+    FormDriverBankDataComponent,
+    ProprietariesComponent,
+    ProprietaryComponent,
+    FormProprietariesSearchComponent,
+    FormProprietariesTableComponent,
+    FormProprietaryLinkComponent
   ],
   imports: [
     BrowserModule,

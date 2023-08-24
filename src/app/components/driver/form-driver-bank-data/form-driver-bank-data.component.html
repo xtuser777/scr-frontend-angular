@@ -1,0 +1,47 @@
+<app-fieldset-card legend="Dados bancários do motorista" [obrigatory]="true">
+  <div class="row">
+    <app-form-input-text
+      #bankRef
+      colSm="2"
+      id="bank"
+      label="Banco"
+      mask="###"
+      controlName="bank"
+      [obrigatory]="true"
+      [form]="form"
+    />
+    <app-form-input-text
+      #agencyRef
+      colSm="3"
+      id="agency"
+      label="Agência c/ dígito"
+      mask="#####"
+      controlName="agency"
+      [obrigatory]="true"
+      [form]="form"
+    />
+    <app-form-input-text
+      #accountRef
+      colSm="4"
+      id="account"
+      label="Conta c/ dígito"
+      mask="###########"
+      controlName="account"
+      [obrigatory]="true"
+      [form]="form"
+    />
+    <app-form-input-select
+      #typeRef
+      colSm="3"
+      id="type"
+      label="Tipo da conta"
+      controlName="type"
+      [obrigatory]="true"
+      [form]="form"
+    >
+      <option value="0">SELECIONE</option>
+      <option value="1">Corrente</option>
+      <option value="2">Poupança</option>
+    </app-form-input-select>
+  </div>
+</app-fieldset-card>

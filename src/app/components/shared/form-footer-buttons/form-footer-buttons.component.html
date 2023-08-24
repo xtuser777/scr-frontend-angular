@@ -1,0 +1,34 @@
+<div class="row">
+  <app-form-link-button
+    colSm="2"
+    id="back"
+    color="btn-default"
+    [label]="false"
+    text="VOLTAR"
+    link="/representacoes/gerenciar/cliente"
+  />
+
+  <div class="col-sm-{{clear ? '6' : '8'}}"></div>
+
+  <app-form-button
+    *ngIf="clear"
+    colSm="2"
+    id="clear"
+    color="btn-primary"
+    text="LIMPAR"
+    [fn]="2"
+    [label]="false"
+    [parent]="this"
+  />
+
+  <app-form-button
+    *ngIf="save"
+    colSm="2"
+    id="save"
+    color="btn-success"
+    text="SALVAR"
+    [fn]="1"
+    [label]="false"
+    [parent]="this"
+  />
+</div>

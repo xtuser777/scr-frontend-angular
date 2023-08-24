@@ -1,0 +1,16 @@
+<app-card-title title="Cadastrar Novo Motorista" />
+
+<app-form-individual-person #individualPersonRef />
+
+<div class="row">
+  <div class="col-sm-4">
+    <app-form-driver-data #driverRef />
+  </div>
+  <div class="col-sm-8">
+    <app-form-driver-bank-data #bankDataRef />
+  </div>
+</div>
+
+<app-form-contact #contactRef />
+
+<app-form-footer-buttons [parent]="this" [clear]="true" [save]="true" />
